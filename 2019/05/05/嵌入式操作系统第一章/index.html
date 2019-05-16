@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Hexo
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style/github.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+    <!-- <div class="logo">
+        <a href="/">Hexo</a>
+    </div> -->
+    <div class="logo">
+        <img src="/images/logo.png" alt="Logo">
+    </div>
+    <div class="nav">
+        <ul class="menu">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        Home
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a href="https://github.com/loveminimal" class="menu-item-link">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+</div>
+        <div class="article">
+    <!-- <div class="article-title">
+        <h2>
+            嵌入式操作系统 第一章
+        </h2>
+    </div> -->
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fas fa-edit"></i>
+            2019/05/05 Sun 19:27&nbsp;&nbsp;&nbsp;
+            <span class="just-a-temp"><span>
+            <i class="fas fa-redo"></i>
+            2019/05/05 Sun 19:32
+        </span></span></div>
+    </div>
+    <div class="article-content">
+        <h1 id="嵌入式操作系统–第一章"><a href="#嵌入式操作系统–第一章" class="headerlink" title="嵌入式操作系统–第一章"></a>嵌入式操作系统–第一章</h1><h3 id="1-1-嵌入式系统的概念"><a href="#1-1-嵌入式系统的概念" class="headerlink" title="1.1 嵌入式系统的概念"></a>1.1 嵌入式系统的概念</h3><p>通用概念：嵌入式系统是以应用为中心，以计算机技术为基础，软硬件可配置，对功能，可靠性，成本，体积，功耗有严格约束的专用系统。<br>IEEE的定义：嵌入式系统是用来控制、监控、或者辅助操作机器、装置、工厂等大规模系统的设备（devices used to control, monitor, or assist the operation of equipment, machinery or plants）。这个定义主要是从嵌入式系统的用途方面来进行定义的。<br><strong>无处不在的嵌入式系统</strong>：汽车电子的防抱死系统，无线传感器网络，智能感知微尘，无人机，四轴飞行器。<br><strong>嵌入式系统特点</strong>：</p>
+<ul>
+<li>专用，软硬件可剪裁可配置</li>
+<li>低功耗，高可靠性，高稳定性（鲁棒性）</li>
+<li>实时性</li>
+<li>代码可固化：为提高执行速度和系统可靠性，嵌入式系统中的软件一般固化在存储器芯片或单片机本身中</li>
+<li>弱交互性</li>
+<li>可信性：安全，防危，可靠<br><img src="01.png" alt="嵌入式基本结构模型"><h3 id="1-2-嵌入式系统发展"><a href="#1-2-嵌入式系统发展" class="headerlink" title="1.2 嵌入式系统发展"></a>1.2 嵌入式系统发展</h3></li>
+<li><strong>初期</strong>:轮询系统（裸板嵌入式系统）：顺序执行的系统，缺少灵活性，耦合性太大。</li>
+<li>针对轮询系统的不足，提出了<strong>前后台系统</strong>：后台系统和轮询系统一样也是顺序执行的，但前台系统引入了中断，能对实时事物做出快速响应，增加了系统的灵活性</li>
+<li>随着嵌入式系统复杂性的增加提出了<strong>嵌入式操作系统</strong>，以解决事物的不可剥夺，不可阻塞性，实现多任务的并发执行。<h3 id="1-3-嵌入式操作系统"><a href="#1-3-嵌入式操作系统" class="headerlink" title="1.3 嵌入式操作系统"></a>1.3 嵌入式操作系统</h3>由于嵌入式操作系统及其软件往往被嵌入特定的控制设备中，用于实时地响应并处理外部事件，所以嵌入式操作系统有时又被成为实时操作系统（RTOS）<h4 id="1-3-1-简单内核"><a href="#1-3-1-简单内核" class="headerlink" title="1.3.1 简单内核"></a>1.3.1 简单内核</h4><strong>RTOS至少实现如下功能</strong></li>
+<li>任务调度</li>
+<li>任务调度机制</li>
+<li>内存管理机制<h5 id="1-3-2-RTOS结构"><a href="#1-3-2-RTOS结构" class="headerlink" title="1.3.2 RTOS结构"></a>1.3.2 RTOS结构</h5></li>
+<li>整体结构：这种RTOS是一个整块，内部分为若干模块，模块之间相互调用，不分层次，形成网状调用模式。工作模式分为系统模式和用户模式。（嵌入式Linux和WindowsCE）</li>
+<li>层次结构：这种结构中，下层为上层提供服务，上层使用下层提供的服务。内核位于最底层。（VxWorks,DeltaOS)</li>
+<li>微内核结构：也称为客户机/服务器结构，最初定义时，微内核中只提供几种基本服务，随着时间推移，只要保持C/S结构，微内核中基本服务的个数不再受限，并且除基本内核外，C/S结构的其他服务模块可以根据应用需求随意裁剪。（QNX）</li>
+<li>构件化结构：构建化RTOS内核由一组独立的构件和一个构件运行管理器组成，后者可以维护内核构件之间的协作关系。配置灵活，裁剪方便（TinyOS)</li>
+</ul>
+<h5 id="1-3-3-RTOS特点"><a href="#1-3-3-RTOS特点" class="headerlink" title="1.3.3 RTOS特点"></a>1.3.3 RTOS特点</h5><ul>
+<li>时间约束：任务具有一定的时间约束（截止时间）</li>
+<li>可预测性 ：要求硬件延迟的可预测性、软件系统的可预测性、以及应用程序响应时间的可预测性</li>
+<li>可靠性：环境恶劣，有较高的可靠性 </li>
+<li>交互作用：与外部环境的交互 ——  必须在规定的时间内对外部请求做出反应</li>
+<li>多任务类型：周期任务、突发任务、非周期任务、非实时任务</li>
+<li>实时调度</li>
+</ul>
+
+    </div>
+</div>
+        <div class="footer">
+    <a href="#">
+        2018 <i class="fab fa-studiovinari"></i> Bavichi <i class="fas fa-angle-double-up"></i>
+    </a>
+</div>
+
+
+<script src="/js/search.js"></script>
+    </div>
+</body>
+
+</html>

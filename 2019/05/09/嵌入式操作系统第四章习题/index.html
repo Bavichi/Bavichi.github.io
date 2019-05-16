@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Hexo
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style/github.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+    <!-- <div class="logo">
+        <a href="/">Hexo</a>
+    </div> -->
+    <div class="logo">
+        <img src="/images/logo.png" alt="Logo">
+    </div>
+    <div class="nav">
+        <ul class="menu">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        Home
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a href="https://github.com/loveminimal" class="menu-item-link">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+</div>
+        <div class="article">
+    <!-- <div class="article-title">
+        <h2>
+            嵌入式操作系统 第四章习题
+        </h2>
+    </div> -->
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fas fa-edit"></i>
+            2019/05/09 Thu 15:46&nbsp;&nbsp;&nbsp;
+            <span class="just-a-temp"><span>
+            <i class="fas fa-redo"></i>
+            2019/05/09 Thu 15:47
+        </span></span></div>
+    </div>
+    <div class="article-content">
+        <h1 id="嵌入式操作系统–第四章"><a href="#嵌入式操作系统–第四章" class="headerlink" title="嵌入式操作系统–第四章"></a>嵌入式操作系统–第四章</h1><h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><h5 id="抢占调度和不可抢占调度的区别是什么？RTOS-通常采用哪一种？原因是什么？"><a href="#抢占调度和不可抢占调度的区别是什么？RTOS-通常采用哪一种？原因是什么？" class="headerlink" title="抢占调度和不可抢占调度的区别是什么？RTOS 通常采用哪一种？原因是什么？"></a>抢占调度和不可抢占调度的区别是什么？RTOS 通常采用哪一种？原因是什么？</h5><ul>
+<li>抢占调度是指当前执行任务可以被优先级更高的就绪任务打断，不可抢占调度是指当前执行任务不允许被打断。大多数RTOS采用抢占式的调度方式，因为要保证对事件的实时响应，采用抢占式调度算法可以保证优先级更高的进程可以暂停优先级低的进而获取CPU时间<h5 id="什么是并发性？与并行性的区别是什么？什么是safety？与security的区别？"><a href="#什么是并发性？与并行性的区别是什么？什么是safety？与security的区别？" class="headerlink" title="什么是并发性？与并行性的区别是什么？什么是safety？与security的区别？"></a>什么是并发性？与并行性的区别是什么？什么是safety？与security的区别？</h5></li>
+<li>并发性有时也会称为同时性，是指或多个事件在同一时间间隔内发生。并行性是指两个或多个事件在同一时刻发生</li>
+<li>safety是指防危性，研究系统是否会导致灾难发生，关心的是引起危险的软件故障。security是指安全性，其核心是保密。关注外部环境对系统的恶意攻击，减少应用开发者的重复劳动。<h5 id="与通用操作系统相比，RTOS-具有哪些特点？"><a href="#与通用操作系统相比，RTOS-具有哪些特点？" class="headerlink" title="与通用操作系统相比，RTOS 具有哪些特点？"></a>与通用操作系统相比，RTOS 具有哪些特点？</h5>1、OS专注于计算吞吐量，而RTOS专注于快速的响应时间。</li>
+</ul>
+<p>2、OS可以被广泛使用，而RTOS通常只嵌入在需要实时响应的设备中。</p>
+<p>3、OS使用分时设计以允许多任务的同时运行；RTOS使用分时设计或者事件驱动设计。</p>
+<p>4、与OS相比，RTOS的编码更严格。</p>
+<ul>
+<li>通用操作系统中的任务调度策略一般采用基于优先级的抢先式调度策略，对于优先级相同的进程则采用时间片轮转调度方式，用户进程可以通过系统调用动态地调整自己的优先级，操作系统也可根据情况调整某些进程的优先级。    实时操作系统中的任务调度策略目前使用最广泛的主要可分为两种，一种是静态表驱动方式，另一种是固定优先级抢先式调度方式。</li>
+</ul>
+
+    </div>
+</div>
+        <div class="footer">
+    <a href="#">
+        2018 <i class="fab fa-studiovinari"></i> Bavichi <i class="fas fa-angle-double-up"></i>
+    </a>
+</div>
+
+
+<script src="/js/search.js"></script>
+    </div>
+</body>
+
+</html>
